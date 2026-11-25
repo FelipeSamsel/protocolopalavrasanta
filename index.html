@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protocolo Ora et Labora: 21 Dias de Oração em Tempos de Aperto Financeiro</title>
+<meta name="description" content="21 dias de oração guiada, com cerca de 6 minutos por dia, para quem enfrenta aperto financeiro e quer entregar essa fase a Deus.">
+<meta property="og:title" content="Protocolo Ora et Labora: 21 Dias de Oração em Tempos de Aperto Financeiro">
+<meta property="og:description" content="21 dias de oração guiada, com cerca de 6 minutos por dia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8F3E8; --bg2:#F0E6D0; --card:#FFFCF5; --gold:#B8893B; --gold-d:#8F6624;
+  --gold-l:#E6D3A6; --ink:#3A2A14; --ink2:#6B5A41; --line:#E2D3B3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15;color:var(--ink)}
+h1{font-size:clamp(2.1rem,6vw,3.6rem)}
+h2{font-size:clamp(1.8rem,4.5vw,2.6rem);text-align:center;margin-bottom:.6rem}
+h3{font-size:1.45rem;margin-bottom:.4rem}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.narrow{max-width:700px}
+section{padding:72px 0}
+.alt{background:var(--bg2)}
+.sub{text-align:center;color:var(--ink2);max-width:620px;margin:0 auto 40px}
+.topbar{background:var(--ink);color:var(--gold-l);text-align:center;padding:10px 16px;font-size:.92rem}
+.btn{display:inline-block;background:linear-gradient(180deg,#C99A47,var(--gold-d));color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:17px 34px;border-radius:999px;box-shadow:0 6px 18px rgba(143,102,36,.3);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(143,102,36,.38)}
+.btn:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.micro{font-size:.88rem;color:var(--ink2);margin-top:12px}
+.ph{border:2px dashed var(--gold);background:rgba(184,137,59,.07);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--gold-d);font-weight:600;padding:18px;font-size:.95rem}
+
+/* hero */
+.hero{padding:64px 0 72px;background:radial-gradient(ellipse at 50% 0%,#FFF8E6 0%,var(--bg) 65%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold-d);border-radius:999px;padding:5px 16px;font-size:.9rem;margin-bottom:18px;background:var(--card)}
+.hero p.lead{font-size:1.15rem;color:var(--ink2);margin:18px 0 28px;max-width:520px}
+.hero .ph{aspect-ratio:4/5}
+
+/* video */
+.video{aspect-ratio:16/9;max-width:760px;margin:0 auto}
+
+/* cards */
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card p{color:var(--ink2);font-size:.98rem}
+.card .ico{font-size:1.7rem;margin-bottom:8px}
+
+/* receive */
+.receive{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.receive .ph{aspect-ratio:1/1}
+.checks{list-style:none;display:grid;gap:14px}
+.checks li{padding-left:34px;position:relative}
+.checks li::before{content:"✓";position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#fff;font-size:.8rem;display:grid;place-items:center;font-weight:700}
+.checks b{color:var(--ink)}
+
+/* testimonials */
+.t{font-style:italic}
+.t .who{display:flex;align-items:center;gap:12px;margin-top:16px;font-style:normal}
+.av{width:42px;height:42px;border-radius:50%;background:var(--gold-l);color:var(--gold-d);display:grid;place-items:center;font-weight:700}
+.who small{display:block;color:var(--ink2)}
+
+/* offer */
+.offer{max-width:520px;margin:0 auto;background:var(--card);border:2px solid var(--gold);border-radius:22px;padding:36px 30px;text-align:center;box-shadow:0 18px 50px rgba(143,102,36,.18)}
+.offer .ph{aspect-ratio:16/10;margin:18px 0}
+.offer ul{list-style:none;text-align:left;display:grid;gap:10px;margin:20px 0 24px}
+.offer li{padding-left:28px;position:relative}
+.offer li::before{content:"✓";position:absolute;left:0;color:var(--gold-d);font-weight:700}
+.price{font-family:'Cormorant Garamond',serif;font-size:3.6rem;font-weight:700;color:var(--gold-d);line-height:1}
+.price small{font-size:1.4rem;vertical-align:top;margin-right:4px}
+
+/* guarantee */
+.guar{display:flex;gap:26px;align-items:center;max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}
+.seal{flex:none;width:96px;height:96px;border-radius:50%;border:3px double var(--gold);display:grid;place-items:center;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--gold-d);line-height:1.1}
+.seal b{font-size:2rem;display:block}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold-d);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 22px 20px;color:var(--ink2)}
+
+.final{text-align:center}
+.final p{color:var(--ink2);margin:10px 0 26px}
+footer{background:var(--ink);color:#CDBE9F;font-size:.85rem;padding:36px 0;text-align:center}
+footer p{max-width:720px;margin:0 auto 8px}
+
+@media(max-width:800px){
+  section{padding:54px 0}
+  .hero .wrap,.receive{grid-template-columns:1fr}
+  .hero .ph{aspect-ratio:16/10;order:-1}
+  .hero{text-align:center}.hero p.lead{margin-left:auto;margin-right:auto}
+  .guar{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Acesso imediato após a confirmação do pagamento • Garantia de 7 dias</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge">21 dias de oração guiada • cerca de 6 minutos por dia</span>
+      <h1>Entregue a Deus o seu aperto financeiro, um dia de oração de cada vez</h1>
+      <p class="lead">O Protocolo Ora et Labora acompanha você por 21 dias com orações curtas, em áudio e vídeo, para voltar a ter paz, confiança e direção enquanto trabalha para sair desse momento.</p>
+      <a class="btn" href="#oferta">Quero começar meus 21 dias</a>
+      <p class="micro">Compra 100% segura • Acesso imediato</p>
+    </div>
+    <!-- IMAGEM: capa / mockup do protocolo (proporção 4:5). Troque o div abaixo por: <img src="capa.jpg" alt="Protocolo Ora et Labora"> -->
+    <div class="ph">[ IMAGEM PRINCIPAL ]<br>Capa ou mockup do Protocolo<br>(proporção 4:5)</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Conheça o protocolo por dentro</h2>
+    <p class="sub">Um vídeo rápido para você ver como funcionam os 21 dias.</p>
+    <!-- VÍDEO: substitua o div abaixo por <iframe src="URL_DO_VIDEO" allowfullscreen></iframe> ou <video controls src="video.mp4"></video> -->
+    <div class="ph video">[ VÍDEO DE APRESENTAÇÃO ]<br>Em breve</div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Feito para quem precisa de esperança e de um caminho</h2>
+    <p class="sub">Se você se reconhece em alguma destas situações, este protocolo foi pensado para você.</p>
+    <div class="grid g4">
+      <div class="card"><div class="ico">🕊️</div><h3>Quem está no aperto</h3><p>Contas atrasadas, dívidas e a sensação de não ver saída. Aqui você encontra um momento diário de paz para respirar e rezar.</p></div>
+      <div class="card"><div class="ico">🌱</div><h3>Quem quer mudar de vida</h3><p>Você sente que é hora de recomeçar e quer dar esse passo com fé, constância e o coração aberto.</p></div>
+      <div class="card"><div class="ico">🙏</div><h3>Quem acredita na oração</h3><p>Você sabe que rezar sustenta a alma e quer um roteiro simples para não deixar a oração de lado nos dias difíceis.</p></div>
+      <div class="card"><div class="ico">⏳</div><h3>Quem tem pouco tempo</h3><p>Sua rotina é corrida. São cerca de 6 minutos por dia, para ouvir, assistir ou ler em qualquer lugar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona o Ora et Labora</h2>
+    <p class="sub">Reze e trabalhe: a oração dá a força, e a sua atitude diária faz o resto.</p>
+    <div class="grid g3">
+      <div class="card"><h3>1. Escolha o seu formato</h3><p>Todos os dias você tem uma oração em vídeo, em áudio e em texto. Use o que for melhor para o seu momento.</p></div>
+      <div class="card"><h3>2. Reze com uma palavra-tema</h3><p>Cada um dos 21 dias gira em torno de uma palavra que guia a oração e o seu coração durante o dia.</p></div>
+      <div class="card"><h3>3. Marque no planner</h3><p>Ao terminar a oração, marque o dia no planner para ver a sua constância crescer até o dia 21.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap receive">
+    <!-- IMAGEM: mockup do pacote (vídeos, áudios, PDF e planner), proporção 1:1 -->
+    <div class="ph">[ IMAGEM ]<br>Mockup do pacote completo<br>(proporção 1:1)</div>
+    <div>
+      <h2 style="text-align:left">Tudo o que você recebe</h2>
+      <p style="color:var(--ink2);margin-bottom:22px">Um único acesso com tudo para viver os 21 dias, no celular, tablet ou computador.</p>
+      <ul class="checks">
+        <li><b>22 vídeos</b> com a oração de cada dia</li>
+        <li><b>22 áudios</b> com a mesma oração, para ouvir no fone, no ônibus ou no trabalho</li>
+        <li><b>PDF para imprimir</b> com todos os textos das orações</li>
+        <li><b>Planner</b> para marcar cada oração feita ao longo dos 21 dias</li>
+        <li><b>Acesso imediato</b> após a confirmação do pagamento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Quem já rezou fala por nós</h2>
+    <p class="sub">Histórias de quem viveu os 21 dias.</p>
+    <div class="grid g3">
+      <!-- Copie e edite cada card. Troque as iniciais, o texto, o nome e a cidade. -->
+      <div class="card t"><p>"[ Depoimento 1 ]"</p><div class="who"><div class="av">AB</div><div><b>Nome Sobrenome</b><small>Cidade, UF</small></div></div></div>
+      <div class="card t"><p>"[ Depoimento 2 ]"</p><div class="who"><div class="av">CD</div><div><b>Nome Sobrenome</b><small>Cidade, UF</small></div></div></div>
+      <div class="card t"><p>"[ Depoimento 3 ]"</p><div class="who"><div class="av">EF</div><div><b>Nome Sobrenome</b><small>Cidade, UF</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="oferta">
+  <div class="wrap">
+    <h2>Comece hoje o seu Protocolo de 21 dias</h2>
+    <p class="sub">Um acesso, tudo incluso, com garantia.</p>
+    <div class="offer">
+      <h3>Protocolo Ora et Labora</h3>
+      <p style="color:var(--ink2)">21 Dias de Oração em Tempos de Aperto Financeiro</p>
+      <div class="ph">[ IMAGEM ] Capa do produto</div>
+      <ul>
+        <li>22 vídeos com a oração de cada dia</li>
+        <li>22 áudios para ouvir onde quiser</li>
+        <li>PDF para imprimir com todos os textos</li>
+        <li>Planner para marcar as orações feitas</li>
+      </ul>
+      <div class="price"><small>R$</small>29,90</div>
+      <p class="micro" style="margin-bottom:20px">Pagamento único • Acesso imediato</p>
+      <a class="btn" href="https://pay.kiwify.com.br/NOGsUyx" style="display:block">Quero meu acesso agora</a>
+      <p class="micro">Pagamento 100% seguro • Garantia de 7 dias</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="guar">
+      <div class="seal"><span><b>7</b>dias</span></div>
+      <div>
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p style="color:var(--ink2)">Faça a oração, conheça o material e, se nos primeiros 7 dias você sentir que não é para você, envie um e-mail e devolvemos 100% do valor, sem perguntas e sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2>Perguntas frequentes</h2>
+    <p class="sub">Tudo o que você precisa saber antes de começar.</p>
+    <details><summary>Como vou receber o material?</summary><p>Após a confirmação do pagamento, você recebe o acesso imediato por e-mail. O material é 100% digital e funciona em celular, tablet e computador.</p></details>
+    <details><summary>Quanto tempo leva cada oração?</summary><p>Cerca de 6 minutos por dia. Você pode rezar de manhã, no intervalo do trabalho ou antes de dormir.</p></details>
+    <details><summary>Preciso ser católico para participar?</summary><p>[ Ajuste conforme o seu público ] O protocolo é um convite à oração e à confiança em Deus, aberto a todos que desejam rezar durante esse período.</p></details>
+    <details><summary>Posso ouvir as orações em vez de assistir?</summary><p>Sim. Cada dia tem uma oração em vídeo e a mesma oração em áudio, além do texto no PDF.</p></details>
+    <details><summary>Posso imprimir o material?</summary><p>Sim. O PDF com todos os textos e o planner foram feitos para impressão.</p></details>
+    <details><summary>O protocolo garante resultados financeiros?</summary><p>Não. O protocolo é um material de fé e de apoio espiritual, e não promete ganhos ou resultados financeiros. A oração fortalece o coração, e a mudança vem junto com a sua ação e o seu trabalho.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Basta enviar um e-mail e devolvemos 100% do valor.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap narrow">
+    <h2>Dê hoje o primeiro passo dos seus 21 dias</h2>
+    <p>Poucos minutos por dia para rezar, confiar e seguir em frente.</p>
+    <a class="btn" href="#oferta">Quero meu acesso agora</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Protocolo Ora et Labora. Todos os direitos reservados.</p>
+    <p>Este é um material de natureza espiritual e devocional. Não substitui orientação profissional financeira, jurídica ou psicológica e não garante resultados financeiros.</p>
+  </div>
+</footer>
+
+</body>
+</html>
