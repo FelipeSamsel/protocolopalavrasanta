@@ -78,10 +78,10 @@ section{padding:72px 0}
 .checks b{color:var(--ink)}
 
 /* testimonials */
-.t{font-style:italic}
-.t .who{display:flex;align-items:center;gap:12px;margin-top:16px;font-style:normal}
-.av{width:42px;height:42px;border-radius:50%;background:var(--gold-l);color:var(--gold-d);display:grid;place-items:center;font-weight:700}
-.who small{display:block;color:var(--ink2)}
+.tcard{padding:14px}
+.tcard img{display:block;width:100%;height:auto;border-radius:10px}
+.tname{text-align:center;font-weight:700;margin-top:12px}
+.tnote{text-align:center;color:var(--ink2);font-size:.85rem;margin-top:22px}
 
 /* offer */
 .offer{max-width:520px;margin:0 auto;background:var(--card);border:2px solid var(--gold);border-radius:22px;padding:36px 30px;text-align:center;box-shadow:0 18px 50px rgba(143,102,36,.18)}
@@ -208,11 +208,11 @@ footer p{max-width:720px;margin:0 auto 8px}
     <h2>Quem já rezou fala por nós</h2>
     <p class="sub">Histórias de quem viveu os 21 dias.</p>
     <div class="grid g3">
-      <!-- Copie e edite cada card. Troque as iniciais, o texto, o nome e a cidade. -->
-      <div class="card t"><p>"[ Depoimento 1 ]"</p><div class="who"><div class="av">AB</div><div><b>Nome Sobrenome</b><small>Cidade, UF</small></div></div></div>
-      <div class="card t"><p>"[ Depoimento 2 ]"</p><div class="who"><div class="av">CD</div><div><b>Nome Sobrenome</b><small>Cidade, UF</small></div></div></div>
-      <div class="card t"><p>"[ Depoimento 3 ]"</p><div class="who"><div class="av">EF</div><div><b>Nome Sobrenome</b><small>Cidade, UF</small></div></div></div>
+      <div class="card tcard"><img src="dep1.jpg" alt="Mensagem de Maria sobre a paz que sentiu ao fazer as orações" width="366" height="205" loading="lazy"><div class="tname">Maria</div></div>
+      <div class="card tcard"><img src="dep2.jpg" alt="Mensagem de Miguel sobre a praticidade dos áudios de 6 minutos" width="366" height="205" loading="lazy"><div class="tname">Miguel</div></div>
+      <div class="card tcard"><img src="dep3.jpg" alt="Mensagem de Rosana sobre o PDF e o planner dos 21 dias" width="366" height="205" loading="lazy"><div class="tname">Rosana</div></div>
     </div>
+    <p class="tnote">Nomes alterados para preservar a privacidade.</p>
     <div class="cta-row"><a class="btn" href="#oferta">Quero meu acesso agora</a></div>
   </div>
 </section>
