@@ -78,10 +78,28 @@ section{padding:72px 0}
 .checks b{color:var(--ink)}
 
 /* testimonials */
-.tcard{padding:14px}
-.tcard img{display:block;width:100%;height:auto;border-radius:10px}
-.tname{text-align:center;font-weight:700;margin-top:12px}
+
+/* carrossel de depoimentos */
+.carousel{position:relative;max-width:600px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.cview{overflow:hidden}
+.ctrack{display:flex;transition:transform .5s ease}
+.cslide{flex:0 0 100%;min-width:0;margin:0;padding:28px 66px 64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.cslide img{display:block;width:100%;max-width:460px;height:auto;border-radius:12px}
+.cname{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;color:var(--ink)}
+.carr{z-index:2;position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--gold-d);cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 12px rgba(58,42,20,.15)}
+.carr:hover{background:var(--gold);color:#fff}
+.carr:focus-visible,.cdot:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.carr.prev{left:12px}.carr.next{right:12px}
+.cdots{position:absolute;left:0;right:0;bottom:24px;display:flex;justify-content:center;gap:10px;pointer-events:none}
+.cdot{pointer-events:auto;width:11px;height:11px;border-radius:50%;border:0;padding:0;background:var(--gold-l);cursor:pointer}
+.cdot[aria-current="true"]{background:var(--gold-d)}
 .tnote{text-align:center;color:var(--ink2);font-size:.85rem;margin-top:22px}
+@media(max-width:600px){
+  .cslide{padding:20px 14px 76px}
+  .carr{top:auto;bottom:14px;transform:none;width:42px;height:42px}
+  .carr.prev{left:16px}.carr.next{right:16px}
+  .cdots{bottom:29px}
+}
 
 /* offer */
 .offer{max-width:520px;margin:0 auto;background:var(--card);border:2px solid var(--gold);border-radius:22px;padding:36px 30px;text-align:center;box-shadow:0 18px 50px rgba(143,102,36,.18)}
@@ -207,10 +225,28 @@ footer p{max-width:720px;margin:0 auto 8px}
   <div class="wrap">
     <h2>Quem já rezou fala por nós</h2>
     <p class="sub">Histórias de quem viveu os 21 dias.</p>
-    <div class="grid g3">
-      <div class="card tcard"><img src="dep1.jpg" alt="Mensagem de Maria sobre a paz que sentiu ao fazer as orações" width="366" height="205" loading="lazy"><div class="tname">Maria</div></div>
-      <div class="card tcard"><img src="dep2.jpg" alt="Mensagem de Miguel sobre a praticidade dos áudios de 6 minutos" width="366" height="205" loading="lazy"><div class="tname">Miguel</div></div>
-      <div class="card tcard"><img src="dep3.jpg" alt="Mensagem de Rosana sobre o PDF e o planner dos 21 dias" width="366" height="205" loading="lazy"><div class="tname">Rosana</div></div>
+    <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Depoimentos">
+      <div class="cview"><div class="ctrack">
+          <figure class="cslide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+            <img src="dep1.jpg" alt="Mensagem de Maria sobre a paz que sentiu ao fazer as orações" width="732" height="452" loading="lazy">
+            <figcaption class="cname">Maria</figcaption>
+          </figure>
+          <figure class="cslide" role="group" aria-roledescription="slide" aria-label="2 de 3">
+            <img src="dep2.jpg" alt="Mensagem de Miguel sobre a praticidade dos áudios de 6 minutos" width="738" height="416" loading="lazy">
+            <figcaption class="cname">Miguel</figcaption>
+          </figure>
+          <figure class="cslide" role="group" aria-roledescription="slide" aria-label="3 de 3">
+            <img src="dep3.jpg" alt="Mensagem de Rosana sobre o PDF e o planner dos 21 dias" width="740" height="416" loading="lazy">
+            <figcaption class="cname">Rosana</figcaption>
+          </figure>
+      </div></div>
+      <button type="button" class="carr prev" aria-label="Depoimento anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" class="carr next" aria-label="Próximo depoimento"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="cdots">
+        <button type="button" class="cdot" aria-label="Ir para o depoimento 1"></button>
+        <button type="button" class="cdot" aria-label="Ir para o depoimento 2"></button>
+        <button type="button" class="cdot" aria-label="Ir para o depoimento 3"></button>
+      </div>
     </div>
     <p class="tnote">Nomes alterados para preservar a privacidade.</p>
     <div class="cta-row"><a class="btn" href="#oferta">Quero meu acesso agora</a></div>
@@ -293,6 +329,28 @@ footer p{max-width:720px;margin:0 auto 8px}
   v.addEventListener('pause',function(){ if(!v.ended && v.currentTime<1) box.classList.remove('playing'); });
   v.addEventListener('ended',function(){box.classList.remove('playing');});
   v.addEventListener('error',function(){msg('Não foi possível carregar o vídeo. Atualize a página e tente novamente.');});
+})();
+
+(function(){
+  var c=document.querySelector('.carousel'); if(!c) return;
+  var track=c.querySelector('.ctrack'), slides=track.children, dots=c.querySelectorAll('.cdot'), n=slides.length, i=0, timer;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(k){
+    i=(k+n)%n; track.style.transform='translateX('+(-100*i)+'%)';
+    for(var a=0;a<n;a++){ dots[a].setAttribute('aria-current',a===i?'true':'false'); slides[a].setAttribute('aria-hidden',a===i?'false':'true'); }
+  }
+  function stop(){ clearInterval(timer); }
+  function start(){ stop(); if(!reduce) timer=setInterval(function(){ go(i+1); },5000); }
+  c.querySelector('.prev').addEventListener('click',function(){ go(i-1); start(); });
+  c.querySelector('.next').addEventListener('click',function(){ go(i+1); start(); });
+  for(var a=0;a<n;a++){ (function(k){ dots[k].addEventListener('click',function(){ go(k); start(); }); })(a); }
+  c.addEventListener('mouseenter',stop); c.addEventListener('mouseleave',start);
+  c.addEventListener('focusin',stop); c.addEventListener('focusout',start);
+  var x0=null;
+  c.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; stop(); },{passive:true});
+  c.addEventListener('touchend',function(e){ if(x0!==null){ var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(dx<0?i+1:i-1); } x0=null; start(); });
+  c.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft'){ go(i-1); start(); } else if(e.key==='ArrowRight'){ go(i+1); start(); } });
+  go(0); start();
 })();
 </script>
 </body>
