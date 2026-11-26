@@ -28,8 +28,12 @@ section{padding:72px 0}
 .alt{background:var(--bg2)}
 .sub{text-align:center;color:var(--ink2);max-width:620px;margin:0 auto 40px}
 .topbar{background:var(--ink);color:var(--gold-l);text-align:center;padding:10px 16px;font-size:.92rem}
-.btn{display:inline-block;background:linear-gradient(180deg,#C99A47,var(--gold-d));color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:17px 34px;border-radius:999px;box-shadow:0 6px 18px rgba(143,102,36,.3);transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(143,102,36,.38)}
+.btn{display:inline-block;background:linear-gradient(180deg,#3F73AE,#234A78);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:17px 34px;border-radius:999px;box-shadow:0 6px 18px rgba(35,74,120,.32);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(35,74,120,.42)}
+.btn-buy{background:linear-gradient(180deg,#34B35A,#1E8A3F);box-shadow:0 6px 18px rgba(30,138,63,.38);font-size:1.15rem;animation:pulse 2.2s ease-in-out infinite}
+.btn-buy:hover{box-shadow:0 10px 26px rgba(30,138,63,.5)}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+@media(prefers-reduced-motion:reduce){.btn-buy{animation:none}}
 .btn:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .cta-row{text-align:center;margin-top:40px}
 .micro{font-size:.88rem;color:var(--ink2);margin-top:12px}
@@ -188,8 +192,8 @@ footer p{max-width:720px;margin:0 auto 8px}
       <h2 style="text-align:left">Tudo o que você recebe</h2>
       <p style="color:var(--ink2);margin-bottom:22px">Um único acesso com tudo para viver os 21 dias, no celular, tablet ou computador.</p>
       <ul class="checks">
-        <li><b>+ de 20 vídeos</b> com a oração de cada dia</li>
-        <li><b>+ de 20 áudios</b> com a mesma oração, para ouvir no fone, no ônibus ou no trabalho</li>
+        <li><b>22 vídeos</b> com a oração de cada dia</li>
+        <li><b>22 áudios</b> com a mesma oração, para ouvir no fone, no ônibus ou no trabalho</li>
         <li><b>PDF para imprimir</b> com todos os textos das orações</li>
         <li><b>Planner</b> para marcar cada oração feita ao longo dos 21 dias</li>
         <li><b>Acesso imediato</b> após a confirmação do pagamento</li>
@@ -221,14 +225,14 @@ footer p{max-width:720px;margin:0 auto 8px}
       <h3>Protocolo Ora et Labora: 21 Dias de Oração em Tempos de Aperto Financeiro</h3>
       <img class="cover" src="capa.jpg" alt="Protocolo Ora et Labora: 21 Dias de Oração em Tempos de Aperto Financeiro" width="600" height="900" loading="lazy">
       <ul>
-        <li>+ de 20 vídeos com a oração de cada dia</li>
-        <li>+ de 20 áudios para ouvir onde quiser</li>
+        <li>22 vídeos com a oração de cada dia</li>
+        <li>22 áudios para ouvir onde quiser</li>
         <li>PDF para imprimir com todos os textos</li>
         <li>Planner para marcar as orações feitas</li>
       </ul>
       <div class="price"><small>R$</small>29,90</div>
       <p class="micro" style="margin-bottom:20px">Pagamento único • Acesso imediato</p>
-      <a class="btn" href="https://pay.kiwify.com.br/NOGsUyx" style="display:block">Quero meu acesso agora</a>
+      <a class="btn btn-buy" href="https://pay.kiwify.com.br/NOGsUyx" style="display:block">Quero meu acesso agora</a>
       <p class="micro">Pagamento 100% seguro • Garantia de 7 dias</p>
     </div>
   </div>
